@@ -7,6 +7,10 @@ const main = async () => {
   await Contract.deployed()
   console.log("Contract deployed to ", Contract.address)
 
+  console.log("Interacting with smart contracts")
+  const Hello = await sayHello.retrieve()
+  console.log(Hello)
+
 }
 
 (async ()=>{
