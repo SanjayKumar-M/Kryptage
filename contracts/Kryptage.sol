@@ -30,10 +30,15 @@ contract Kryptage {
         //Confirming that all the file parameters are greater than 0
         //and owner address exists
         require(bytes(fileName).length > 0);
+
         require(bytes(fileType).length > 0);
+
         require(bytes(fileDescription).length > 0);
+
         require(bytes(fileHash).length > 0);
+
         require(fileSize > 0);
+        
         require(msg.sender != address(0));
 
         fileCount += 1;
