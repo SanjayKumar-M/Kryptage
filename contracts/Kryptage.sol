@@ -19,6 +19,7 @@ contract Kryptage {
     //declaring a public mapping to access outside the smart contract
     mapping(uint => File) public _file;
 
+    //declared a fucntion for uploading a file
     function uploadFile(
         string memory fileName,
         string memory fileType,
