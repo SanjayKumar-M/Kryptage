@@ -3,7 +3,7 @@ pragma solidity ^0.8.7;
 
 contract Kryptage {
     string Name = "Kryptage";
-
+    uint fileCount = 0;
     //declaring class of File
     struct File {
         string Name;
@@ -25,6 +25,18 @@ contract Kryptage {
         string memory fileType,
         string memory fileDescription,
         string memory fileHash,
-        uint _ileSize
-    ) public {}
+        uint fileSize
+    ) public {
+
+         //Confirming that all the file parameters are greater than 0 
+         //and owner address exists 
+        require(bytes(fileName).length > 0);
+        require(bytes(fileType).length > 0);
+        require(bytes(fileDescription).length > 0);
+        require(bytes(fileHash).length > 0);
+        require(fileSize > 0);
+        require(msg.sender != address(0));
+
+        fileCount += 1;
+    }
 }
