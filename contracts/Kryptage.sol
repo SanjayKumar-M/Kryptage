@@ -15,6 +15,6 @@ contract Kryptage {
         address payable owner;
     }
    //mapping the file id to the class File (Nested mapping)
-   //declaring a public mappung t
+   //declaring a public mapping to access outside the smart contract
     mapping (uint => File) public _file;
 }
