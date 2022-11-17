@@ -19,6 +19,20 @@ contract Kryptage {
     //declaring a public mapping to access outside the smart contract
     mapping(uint => File) public _file;
 
+   //declaring event for recording after uploading 
+
+   event afterUploading(
+      string Name;
+        string Type;
+        string Description;
+        string Hash;
+        uint Size;
+        uint Id;
+        uint Timestamp;
+        address payable owner;
+
+   )
+
     //declared a fucntion for uploading a file
     function uploadFile(
         string memory fileName,
@@ -38,9 +52,13 @@ contract Kryptage {
         require(bytes(fileHash).length > 0);
 
         require(fileSize > 0);
-        
+
         require(msg.sender != address(0));
 
         fileCount += 1;
+
+        //mapping files to the contract(adding files)
+        //here 'now' keyword is used to get the timestamp of current mined block
+        _file[fileCount] = File(fileCount,fileName,fileType,fileDescription,fileHash,now,msg.sender)
     }
 }
