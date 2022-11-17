@@ -9,12 +9,17 @@ contract Kryptage {
         string Name;
         string Type;
         string Description;
-        string fileHash;
+        string Hash;
+        uint Size;
         uint Id;
         uint Timestamp;
         address payable owner;
     }
-   //mapping the file id to the class File (Nested mapping)
-   //declaring a public mapping to access outside the smart contract
-    mapping (uint => File) public _file;
+    //mapping the file id to the class File
+    //declaring a public mapping to access outside the smart contract
+    mapping(uint => File) public _file;
+
+    function uploadFile(string memory fileName,string memory fileType,string memory fileDescription,string memory fileHash,uint _ileSize) public{
+
+    }
 }
