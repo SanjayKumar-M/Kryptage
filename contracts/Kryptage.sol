@@ -6,15 +6,16 @@ contract Kryptage {
     uint public fileCount = 0;
     //declaring class of File
     mapping(uint => File) public _file;
+
     struct File {
-        string Name;
-        string Type;
-        string Description;
+        uint Id;
         string Hash;
         uint Size;
-        uint Id;
-        uint Timestamp;
-        address payable owner;
+        string Type;
+        string Name;
+        string Description;
+        uint Time;
+        address owner;
     }
     //mapping the file id to the class File
     //declaring a public mapping to access outside the smart contract
@@ -22,33 +23,32 @@ contract Kryptage {
     //declaring event for recording after uploading
 
     event afterUploading(
-        string Name,
-        string Type,
-        string Description,
+        uint Id,
         string Hash,
         uint Size,
-        uint Id,
-        uint Timestamp,
-        address payable owner
+        string Type,
+        string Name,
+        string Description,
+        uint Time,
+        address owner
     );
 
     //declared a fucntion for uploading a file
     function uploadFile(
-        string memory fileName,
-        string memory fileType,
-        string memory fileDescription,
         string memory fileHash,
-        uint fileSize
+        uint fileSize,
+        string memory fileType,
+        string memory fileName,
+        string memory fileDescription
     ) public {
         //Confirming that all the file parameters are greater than 0
         //and owner address exists
-        require(bytes(fileName).length > 0);
+        require(bytes(fileHash).length > 0);
 
         require(bytes(fileType).length > 0);
 
         require(bytes(fileDescription).length > 0);
-
-        require(bytes(fileHash).length > 0);
+        require(bytes(fileName).length > 0);
 
         require(msg.sender != address(0));
         require(fileSize > 0);
@@ -57,5 +57,26 @@ contract Kryptage {
 
         //mapping files to the contract(adding files)
         //here 'now' keyword is used to get the timestamp of current mined block
+        _file[fileCount] = File(
+            fileCount,
+            fileHash,
+            fileSize,
+            fileType,
+            fileName,
+            fileDescription,
+            block.timestamp,
+            msg.sender
+        );
+
+        emit afterUploading(
+            fileCount,
+            fileHash,
+            fileSize,
+            fileType,
+            fileName,
+            fileDescription,
+            block.timestamp,
+            msg.sender
+        );
     }
 }
