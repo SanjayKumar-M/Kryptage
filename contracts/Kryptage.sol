@@ -4,6 +4,7 @@ pragma solidity ^0.8.7;
 contract Kryptage {
     string public Name = "Kryptage";
     uint public fileCount = 0;
+    
     //declaring class of File
     mapping(uint => File) public _file;
 
