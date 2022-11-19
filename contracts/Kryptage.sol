@@ -4,7 +4,7 @@ pragma solidity ^0.8.7;
 contract Kryptage {
     string public Name = "Kryptage";
     uint public fileCount = 0;
-    
+
     //declaring class of File
     mapping(uint => File) public _file;
 
@@ -15,7 +15,7 @@ contract Kryptage {
         string Type;
         string Name;
         string Description;
-        uint Time;
+        uint Timestamp;
         address owner;
     }
     //mapping the file id to the class File
@@ -30,7 +30,7 @@ contract Kryptage {
         string Type,
         string Name,
         string Description,
-        uint Time,
+        uint Timestamp,
         address owner
     );
 
@@ -57,7 +57,7 @@ contract Kryptage {
         fileCount += 1;
 
         //mapping files to the contract(adding files)
-        //here 'now' keyword is used to get the timestamp of current mined block
+        //here 'now' keyword is used to get the Timestampstamp of current mined block
         _file[fileCount] = File(
             fileCount,
             fileHash,
