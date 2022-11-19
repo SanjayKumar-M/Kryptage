@@ -9,4 +9,14 @@ const mainContract = async() =>{
 
 }
 
-mainContract()
+const deployContract = async() =>{
+  try{
+    await mainContract();
+    process.exit(0)
+  }
+  catch(err){
+    console.log(err);
+    process.exit(1)
+  }
+} 
+deployContract()
