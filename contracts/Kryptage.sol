@@ -2,9 +2,10 @@
 pragma solidity ^0.8.7;
 
 contract Kryptage {
-    string Name = "Kryptage";
-    uint fileCount = 0;
+    string public Name = "Kryptage";
+    uint public fileCount = 0;
     //declaring class of File
+    mapping(uint => File) public _file;
     struct File {
         string Name;
         string Type;
@@ -17,21 +18,19 @@ contract Kryptage {
     }
     //mapping the file id to the class File
     //declaring a public mapping to access outside the smart contract
-    mapping(uint => File) public _file;
 
-   //declaring event for recording after uploading 
+    //declaring event for recording after uploading
 
-   event afterUploading(
-      string Name;
-        string Type;
-        string Description;
-        string Hash;
-        uint Size;
-        uint Id;
-        uint Timestamp;
-        address payable owner;
-
-   )
+    event afterUploading(
+        string Name,
+        string Type,
+        string Description,
+        string Hash,
+        uint Size,
+        uint Id,
+        uint Timestamp,
+        address payable owner
+    );
 
     //declared a fucntion for uploading a file
     function uploadFile(
@@ -51,14 +50,12 @@ contract Kryptage {
 
         require(bytes(fileHash).length > 0);
 
-        require(fileSize > 0);
-
         require(msg.sender != address(0));
+        require(fileSize > 0);
 
         fileCount += 1;
 
         //mapping files to the contract(adding files)
         //here 'now' keyword is used to get the timestamp of current mined block
-        _file[fileCount] = File(fileCount,fileName,fileType,fileDescription,fileHash,now,msg.sender)
     }
 }
