@@ -34,6 +34,8 @@ contract Kryptage {
         address owner
     );
 
+ 
+
     //declared a fucntion for uploading a file
     function uploadFile(
         string memory fileHash,
