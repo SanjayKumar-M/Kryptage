@@ -5,11 +5,11 @@ const mainContract = async() =>{
   const Contract = await Kryptage.deploy();
   await Contract.deployed();
 
-  console.log(`Finally The Contract is deployed successfully to ${Contract.address}`)
+  console.log(`Finally The Contract is deployed successfully to \n${Contract.address}`)
 
 }
 
-const deployContract = async() =>{
+(async() =>{
   try{
     await mainContract();
     process.exit(0)
@@ -18,5 +18,4 @@ const deployContract = async() =>{
     console.log(err);
     process.exit(1)
   }
-} 
-deployContract()
+})()
