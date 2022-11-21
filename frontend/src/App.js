@@ -4,7 +4,11 @@ const Kryptage = () => {
 
   
   return (
-    <div>Kryptage</div>
+   <div className='container'>
+      <nav>
+        <div className='logo'>Kryptage</div>
+      </nav>
+   </div>
   )
 }
 
