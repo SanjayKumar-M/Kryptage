@@ -13,7 +13,7 @@ const Navbar=()=> {
       <div className='right'>
         <ul>
           <li> <a href='/'>RECENT</a></li>
-          <li><Button variant="contained">CONNECT WALLET</Button></li>
+          <li><Button variant="outlined">CONNECT WALLET</Button></li>
         </ul>
 
 
