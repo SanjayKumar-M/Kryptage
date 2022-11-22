@@ -5,7 +5,7 @@ const Kryptage = () => {
 
 
   return (
-    <div >
+    <div className='container'>
       <Navbar />
     </div>
   )
