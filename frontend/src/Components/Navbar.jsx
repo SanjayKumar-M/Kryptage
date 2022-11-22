@@ -1,7 +1,6 @@
 import { React, useState } from 'react'
 import '../Navbar.css'
-import { ethers } from 'ethers'
-import { ConnectWallet } from '@thirdweb-dev/react';
+import { networks } from '../Utils/networks';
 
 function Navbar() {
   const [currentAccount, setCurrentAccount] = useState('');
@@ -70,6 +69,10 @@ function Navbar() {
           <li> <a href='/'>Recent</a></li>
           <li><button onClick={connectWallet}>CONNECT WALLET</button></li>
         </ul>
+        <div className="right">
+          
+          {currentAccount ? <button>Wallet: {currentAccount.slice(0, 6)}...{currentAccount.slice(-4)}</button>  : <button>Not connected </button> }
+        </div>
 
 
       </div>

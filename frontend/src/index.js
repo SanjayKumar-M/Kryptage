@@ -6,6 +6,6 @@ import Kryptage from './Components/App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
- <Kryptage />
+    <Kryptage />
 );
 
