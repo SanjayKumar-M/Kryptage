@@ -1,10 +1,13 @@
 import React from 'react'
 import './App.css'
+import Navbar from './Navbar'
 const Kryptage = () => {
 
 
   return (
-    <div ></div>
+    <div >
+      <Navbar />
+    </div>
   )
 }
 

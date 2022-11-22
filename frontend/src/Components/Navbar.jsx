@@ -1,12 +1,22 @@
 import React from 'react'
 
+
+
 function Navbar() {
   return (
-    <div>
-      <Logo>
+    <nav>
+      <div className='left'>
+        Kryptage
+      </div>
+      <div className='right'>
+        <ul>
+          <li> <a href='/'>Recent</a></li>
+          <li><button>CONNECT WALLET</button></li>
+        </ul>
 
-      </Logo>
-    </div>
+
+      </div>
+    </nav>
   )
 }
 
