@@ -13,7 +13,7 @@ function Navbar() {
       <div className='right'>
         <ul>
           <li> <a href='/'>Recent</a></li>
-          <li><ConnectWallet accentColor="#f213a4" colorMode="dark" /></li>
+          <li></li>
         </ul>
 
 
