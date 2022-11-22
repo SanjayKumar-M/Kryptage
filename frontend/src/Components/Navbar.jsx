@@ -1,6 +1,6 @@
 import React from 'react'
 import '../Navbar.css'
-
+import { ethers } from 'ethers'
 function Navbar() {
 
   return (
