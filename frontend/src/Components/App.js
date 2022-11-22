@@ -4,7 +4,7 @@ const Kryptage = () => {
 
 
   return (
-    
+    <div ></div>
   )
 }
 
