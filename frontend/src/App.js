@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './App.css'
 const Kryptage = () => {
 
   
@@ -8,6 +8,9 @@ const Kryptage = () => {
       <nav>
         <div className='logo'>Kryptage</div>
       </nav>
+      <div className='side'>
+        <button>CONNECT WALLET</button>
+      </div>
    </div>
   )
 }
