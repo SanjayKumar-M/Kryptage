@@ -12,7 +12,7 @@ function Navbar() {
       <div className='right'>
         <ul>
           <li> <a href='/'>Recent</a></li>
-          <li></li>
+          <li><Button variant="contained">Contained</Button></li>
         </ul>
 
 
