@@ -16,6 +16,8 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
+    padding: 20px;
+    
 
 }
 
