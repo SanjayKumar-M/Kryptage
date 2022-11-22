@@ -1,7 +1,8 @@
 import React from 'react'
 import '../Navbar.css'
+import Button from '@mui/material/Button';
 
-function Navbar() {
+const Navbar=()=> {
   
 
   return (
@@ -11,8 +12,8 @@ function Navbar() {
       </div>
       <div className='right'>
         <ul>
-          <li> <a href='/'>Recent</a></li>
-          <li><Button variant="contained">Contained</Button></li>
+          <li> <a href='/'>RECENT</a></li>
+          <li><Button variant="contained">CONNECT WALLET</Button></li>
         </ul>
 
 
