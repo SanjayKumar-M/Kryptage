@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import '../src/Styles/index.css';
 
 import Kryptage from './Components/App';
 
