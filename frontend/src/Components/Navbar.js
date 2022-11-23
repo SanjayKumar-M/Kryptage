@@ -36,7 +36,7 @@ const Navbar = () => {
       <div className='right'>
         <ul>
           <li> <a href='/'>RECENT</a></li>
-          <li><Button onClick={connectWallet}variant="contained" >Connect</Button></li>
+          <li><Button onClick={connectWallet} variant="contained" >Connect</Button></li>
         </ul>
 
 
