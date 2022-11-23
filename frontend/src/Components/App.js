@@ -9,9 +9,11 @@ const Kryptage = () => {
   return (
     <div className='container'>
      
-          <Navbar />
-          <Main />
-       
+        <Navbar />
+        <Main />
+     
+
+
     </div>
   )
 }
