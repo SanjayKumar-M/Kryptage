@@ -1,9 +1,9 @@
 import React from 'react'
 import '../Styles/Navbar.css'
 import Button from '@mui/material/Button';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+const Navbar = () => {
 
-const Navbar=()=> {
-  
 
   return (
     <nav>
@@ -13,7 +13,12 @@ const Navbar=()=> {
       <div className='right'>
         <ul>
           <li> <a href='/'>RECENT</a></li>
-          <li><Button variant="contained">CONNECT WALLET</Button></li>
+          <li><ConnectButton
+            accountStatus={{
+              smallScreen: 'avatar',
+              largeScreen: 'full',
+            }}
+          /></li>
         </ul>
 
 
