@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className='right'>
         <ul>
           <li> <a href='/'>RECENT</a></li>
-          <li><ConnectButton /></li>
+          <li ><ConnectButton /></li>
         </ul>
 
 
