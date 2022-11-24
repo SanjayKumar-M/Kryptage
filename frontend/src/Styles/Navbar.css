@@ -15,9 +15,11 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
+    position: relative;
+    
   
   }
-  
+/*   
   nav ul li a {
     margin: 16px;
     font-size: 28px;
@@ -30,4 +32,6 @@ nav ul {
   
   nav ul a:hover {
     color: wheat;
-  }
+  } */
+
+  
