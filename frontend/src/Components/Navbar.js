@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav>
       <div className='left'>
-        Kryptage
+        <img src='Kryptage.png'/>
       </div>
       <div className='right'>
         <ul>
