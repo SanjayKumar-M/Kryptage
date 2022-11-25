@@ -1,9 +1,15 @@
 import React from 'react'
 import moment from 'moment'
 import { convertBytes } from './sizeBytes'
-function Main() {
+import '../Styles/Main.css'
+const Main = () => {
   return (
-    <div>Main</div>
+    <div class="container">
+      <div class="name">Register Now</div>
+      <form action="#">
+
+      </form>
+    </div>
   )
 }
 
