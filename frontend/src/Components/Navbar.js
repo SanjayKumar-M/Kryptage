@@ -11,7 +11,7 @@ const Navbar = () => {
       </div>
       <div className='right'>
         <ul>
-          <li>Recent</li>
+          
           <li><ConnectButton /></li>
         </ul>
 
