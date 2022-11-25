@@ -42,7 +42,7 @@ const Kryptage = () => {
         <RainbowKitProvider chains={chains}>
 
           <Navbar />
-          <Main />
+          
         </RainbowKitProvider>
       </WagmiConfig>
 
