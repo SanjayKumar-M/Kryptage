@@ -1,8 +1,9 @@
 import React from 'react'
 import '../Styles/Navbar.css'
+import '../Styles/Main.css'
 
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import Main from './Main';
+
 const Navbar = () => {
 
   return (
@@ -22,7 +23,12 @@ const Navbar = () => {
         </div>
 
       </nav>
-      <Main />
+      <div class="container">
+        <div class="name">Register Now</div>
+        <form action="#">
+
+        </form>
+      </div>
     </>
   )
 }

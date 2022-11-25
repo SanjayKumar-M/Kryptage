@@ -1,6 +1,6 @@
 import '../Styles/App.css'
 import Navbar from './Navbar'
-import Main from './Main'
+
 import '@rainbow-me/rainbowkit/styles.css';
 import {
   getDefaultWallets,
