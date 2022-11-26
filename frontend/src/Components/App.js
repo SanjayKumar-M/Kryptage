@@ -1,5 +1,5 @@
 import '../Styles/App.css'
-import Navbar from './Navbar'
+import Main  from './Main'
 
 import '@rainbow-me/rainbowkit/styles.css';
 import {
@@ -41,7 +41,7 @@ const Kryptage = () => {
       <WagmiConfig client={wagmiClient}>
         <RainbowKitProvider chains={chains}>
 
-          <Navbar />
+          <Main />
           
         </RainbowKitProvider>
       </WagmiConfig>

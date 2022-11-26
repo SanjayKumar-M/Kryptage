@@ -4,7 +4,7 @@ import '../Styles/Main.css'
 
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 
-const Navbar = () => {
+const Main = () => {
 
   return (
 
@@ -33,4 +33,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Main
