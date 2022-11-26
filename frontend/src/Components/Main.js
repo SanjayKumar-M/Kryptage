@@ -1,17 +1,15 @@
 import React from 'react'
 import '../Styles/Navbar.css'
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+import moment from 'moment'
+import { convertBytes } from './sizeBytes';
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import Button from '@mui/material/Button';
+
 const Main = () => {
-  const [value, setValue] = React.useState('Controlled');
-
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
-
-
+  // onSubmit={(event) => {
+  //   event.preventDefault()
+  //   const description = this.fileDescription.value
+  //   this.props.uploadFile(description)
+  // }}
   return (
 
     <div >
@@ -26,6 +24,21 @@ const Main = () => {
         </div>
       </nav>
       <div className='main'>
+        <div class="name">Upload Web3</div>
+        <form >
+          <div class="data">
+            <label for="name">Name</label>
+            <input type="text" />
+            
+
+          </div>
+
+
+          <div class="btn" id="btn2">
+            <button>Upload</button>
+          </div>
+
+        </form>
       </div>
     </div>
   )

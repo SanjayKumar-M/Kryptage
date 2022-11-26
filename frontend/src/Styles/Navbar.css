@@ -35,7 +35,7 @@ nav ul {
     background-color: rgb(15, 15, 23);
    
     display: block;
-    padding: 200px ;
+    padding: 100px ;
     
     color: white;
     border-radius: 9px;
@@ -48,19 +48,61 @@ nav ul {
 .main .txt{
   color: white;
 }
-/*   
-  nav ul li a {
-    margin: 16px;
-    font-size: 28px;
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
-    padding-right: 40px;
-    
-  }
-  
-  nav ul a:hover {
-    color: wheat;
-  } */
+.name {
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: large;
+  background-color: rgb(4, 24, 25);
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: none;
+  border-color: black;
+}
+
+
+.data {
+  display: grid;
+  line-height: 5vh;
+  font-size: 22px;
+  margin: 40px 0;
+}
+
+.btn button {
+  width: 160px;
+  height: 50px;
+  border-radius: 20px;
+  border-style: none;
+
+  background-color: #965fc7;
+  color: rgb(253, 255, 255);
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.btn button:hover {
+  background-color: rgb(88, 47, 190);
+  transition: 0.3s;
+
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
   
