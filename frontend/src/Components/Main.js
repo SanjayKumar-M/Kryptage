@@ -1,9 +1,15 @@
 import React from 'react'
 import '../Styles/Navbar.css'
-
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 const Main = () => {
+  const [value, setValue] = React.useState('Controlled');
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(event.target.value);
+  };
 
   return (
 

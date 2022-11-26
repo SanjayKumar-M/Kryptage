@@ -29,11 +29,16 @@ nav ul {
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(15, 15, 23);
+    /* background-color: rgb(15, 15, 23); */
+    background-color: green;
     display: block;
-    padding: 50px;
-    border-radius: 19px;
+    padding: 200px ;
+    
+    
+    border-radius: 9px;
     box-shadow: 20px;
+    margin-top: 50px;
+    margin-bottom: 300px;
 
 }
 /*   
