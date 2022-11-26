@@ -23,6 +23,19 @@ nav ul {
     
   
   }
+
+.main{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(15, 15, 23);
+    display: block;
+    padding: 50px;
+    border-radius: 19px;
+    box-shadow: 20px;
+
+}
 /*   
   nav ul li a {
     margin: 16px;
