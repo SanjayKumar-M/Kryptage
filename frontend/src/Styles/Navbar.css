@@ -1,3 +1,6 @@
+body{
+  color: aqua;
+}
 nav {
     width: 100%;
     top: 0;
@@ -29,17 +32,21 @@ nav ul {
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* background-color: rgb(15, 15, 23); */
-    background-color: green;
+    background-color: rgb(15, 15, 23);
+   
     display: block;
     padding: 200px ;
     
-    
+    color: white;
     border-radius: 9px;
     box-shadow: 20px;
     margin-top: 50px;
     margin-bottom: 300px;
 
+}
+
+.main .txt{
+  color: white;
 }
 /*   
   nav ul li a {
