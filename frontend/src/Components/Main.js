@@ -26,17 +26,19 @@ const Main = () => {
       <div className='main'>
         <div class="name">Upload Web3</div>
         <form >
-          <div class="data">
-            <label for="name">Name</label>
-            <input type="text" />
-            
+          <div className="data">
+            <label for="name">Description</label>
+            <input type="text" placeholder='anything...'/>
+            <label for="name">Attach file</label>
+            <input type = 'file' />
 
           </div>
 
 
-          <div class="btn" id="btn2">
+          <div className="btn" id="btn2">
             <button>Upload</button>
           </div>
+          <div className='his'><a>History</a></div>
 
         </form>
       </div>
