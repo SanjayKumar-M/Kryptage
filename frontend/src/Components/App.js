@@ -3,6 +3,8 @@ import '../Styles/App.css'
 import Main from './Main'
 import Web3 from 'web3'
 import Kryptage from '../Utils/kryptageABI.json'
+
+
 import '@rainbow-me/rainbowkit/styles.css';
 import {
   getDefaultWallets,
@@ -35,6 +37,10 @@ const wagmiClient = createClient({
   connectors,
   provider
 })
+
+// const ipfsClient = require('ipfs-http-client')
+// const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' })
+
 class App extends Component {
 
   componentWillMount = async () => {
@@ -91,30 +97,30 @@ class App extends Component {
     console.log("Submitting file to IPFS...")
 
     // Add file to the IPFS
-    ipfs.add(this.state.buffer, (error, result) => {
-      console.log('IPFS result', result.size)
-      if (error) {
-        console.error(error)
-        return
-      }
+  //   ipfs.add(this.state.buffer, (error, result) => {
+  //     console.log('IPFS result', result.size)
+  //     if (error) {
+  //       console.error(error)
+  //       return
+  //     }
 
-      this.setState({ loading: true })
-      // Assign value for the file without extension
-      if (this.state.type === '') {
-        this.setState({ type: 'none' })
-      }
-      this.state.kryptage.methods.uploadFile(result[0].hash, result[0].size, this.state.type, this.state.name, description).send({ from: this.state.account }).on('transactionHash', (hash) => {
-        this.setState({
-          loading: false,
-          type: null,
-          name: null
-        })
-        window.location.reload()
-      }).on('error', (e) => {
-        window.alert('Error')
-        this.setState({ loading: false })
-      })
-    })
+  //     this.setState({ loading: true })
+  //     // Assign value for the file without extension
+  //     if (this.state.type === '') {
+  //       this.setState({ type: 'none' })
+  //     }
+  //     this.state.kryptage.methods.uploadFile(result[0].hash, result[0].size, this.state.type, this.state.name, description).send({ from: this.state.account }).on('transactionHash', (hash) => {
+  //       this.setState({
+  //         loading: false,
+  //         type: null,
+  //         name: null
+  //       })
+  //       window.location.reload()
+  //     }).on('error', (e) => {
+  //       window.alert('Error')
+  //       this.setState({ loading: false })
+  //     })
+  //   })
   }
 
   constructor(props) {
