@@ -5,11 +5,7 @@ import { convertBytes } from './sizeBytes';
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 const Main = () => {
-  // onSubmit={(event) => {
-  //   event.preventDefault()
-  //   const description = this.fileDescription.value
-  //   this.props.uploadFile(description)
-  // }}
+
   return (
 
     <div >
@@ -28,9 +24,9 @@ const Main = () => {
         <form >
           <div className="data">
             <label for="name">Description</label>
-            <input type="text" placeholder='anything...'/>
+            <input type="text" placeholder='anything...' />
             <label for="name">Attach file</label>
-            <input type = 'file' />
+            <input type='file' />
 
           </div>
 
