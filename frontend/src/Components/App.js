@@ -42,7 +42,6 @@ const wagmiClient = createClient({
 // const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' })
 
 class App extends Component {
-
   componentWillMount = async () => {
 
     await this.loadBlockchainData()
