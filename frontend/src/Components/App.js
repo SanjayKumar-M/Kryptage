@@ -143,6 +143,14 @@ class App extends Component {
           <RainbowKitProvider chains={chains}>
 
             <Main />
+            { this.state.loading
+          ? <div id="loader" className="text-center mt-5"><p>Loading...</p></div>
+          : <Main
+              files={this.state.files}
+              captureFile={this.captureFile}
+              uploadFile={this.uploadFile}
+            />
+        }
 
           </RainbowKitProvider>
         </WagmiConfig>
