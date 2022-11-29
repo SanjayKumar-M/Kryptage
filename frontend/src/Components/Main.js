@@ -1,11 +1,10 @@
-import React from 'react'
+import React, {Component} from 'react'
 import '../Styles/Navbar.css'
-import moment from 'moment'
-import { convertBytes } from './sizeBytes';
+
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 
-const Main = () => {
-
+class Main extends Component {
+render(){
   return (
 
     <div >
@@ -21,25 +20,30 @@ const Main = () => {
       </nav>
       <div className='main'>
         <div class="name">Upload Web3</div>
-        <form >
+        <form onSubmit={(event) => {
+          event.preventDefault()
+          const description = this.fileDescription.value
+          this.props.uploadFile(description)
+        }}  >
+
           <div className="data">
             <label for="name">Description</label>
-            <input type="text" placeholder='anything...' />
+            <input type="text" placeholder='anything...' ref={(input) => { this.fileDescription = input }} />
             <label for="name">Attach file</label>
-            <input type='file' />
+            <input type='file' onChange={this.props.captureFile}/>
 
           </div>
 
 
           <div className="btn" id="btn2">
-            <button>Upload</button>
+            <button type='submit'>Upload</button>
           </div>
           <div className='his'><a>History</a></div>
 
         </form>
       </div>
-    </div>
+    </div >
   )
-}
+}}
 
 export default Main
