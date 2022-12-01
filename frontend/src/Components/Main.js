@@ -65,7 +65,7 @@ const Main = () => {
         <div className='right btn' >
          
          
-             <button> Wallet: {currentAccount.slice(0, 6)}...{currentAccount.slice(-4)} </button> : <button  onClick={connectWallet}>Connect</button>
+            <button  onClick={connectWallet}>Connect</button>
            
          
         </div>
