@@ -6,6 +6,7 @@ import { useState } from "react"
 
 
 import { BallTriangle } from  'react-loader-spinner'
+import History from './History'
 
 
 const Main = () => {
@@ -78,7 +79,7 @@ const Main = () => {
           {file && (<button type='submit' onClick={uploadFile}>Upload</button>)}
 
         </div>
-        <div className='his'><a href='/'>History</a></div>
+        <div className='his'><a href={History}>History</a></div>
 
 
         {imageURI.length > 0 && (
