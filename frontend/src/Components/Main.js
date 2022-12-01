@@ -12,7 +12,7 @@ const Main = () => {
   const [imageURI, setImageURI] = useState("")
   const [isUploading, setIsUploading] = useState(false)
   const client = new Web3Storage({ token: process.env.REACT_APP_TOKEN })
-  const [setCurrentAccount] = useState('');
+ const [currentAccount, setCurrentAccount] = useState('');
  
   const handleFileChange = (e) => {
     e.preventDefault()
@@ -55,8 +55,6 @@ const Main = () => {
 
 
 
-
-
   return (
 
     <div >
@@ -64,10 +62,12 @@ const Main = () => {
         <div className='left'>
           <img src='https://raw.githubusercontent.com/SanjayKumar-M/Kryptage/main/frontend/src/Utils/Kryptage.png' alt='/' />
         </div>
-        <div className='right'>
-          <ul>
-            <li><button onClick={connectWallet}>Connect</button></li>
-          </ul>
+        <div className='right btn' >
+         
+         
+             <button> Wallet: {currentAccount.slice(0, 6)}...{currentAccount.slice(-4)} </button> : <button  onClick={connectWallet}>Connect</button>
+           
+         
         </div>
       </nav>
       <div className='main'>
