@@ -3,7 +3,7 @@ import '../Styles/Navbar.css'
 
 import { Web3Storage } from 'web3.storage/dist/bundle.esm.min.js'
 import { useState } from "react"
-import { networks } from '../Utils/networks';
+
 import { BallTriangle } from  'react-loader-spinner'
 
 
@@ -97,12 +97,13 @@ const Main = () => {
           {file && (<button type='submit' onClick={uploadFile}>Upload</button>)}
 
         </div>
-        <div className='his'><a href={History}>History</a></div>
+        <div className='his'><a href='https://web3.storage/account/'>History</a></div>
 
 
         {imageURI.length > 0 && (
           <div className="link">
-            <a href={imageURI}>Go To Your File</a>
+            <a href='/'>{imageURI}</a>
+            
 
           </div>
         )}
