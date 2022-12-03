@@ -7,6 +7,7 @@
     "@coinbase/wallet-sdk": "^3.6.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@etherspot/react-transaction-buidler": "^0.21.0",
     "@mantine/core": "^5.8.4",
     "@mui/material": "^5.10.14",
     "@rainbow-me/rainbowkit": "^0.8.0",

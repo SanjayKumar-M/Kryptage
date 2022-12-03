@@ -4,7 +4,7 @@ import '../Styles/Navbar.css'
 import { Web3Storage } from 'web3.storage/dist/bundle.esm.min.js'
 import { useState } from "react"
 
-import { BallTriangle } from  'react-loader-spinner'
+import { BallTriangle } from 'react-loader-spinner'
 
 
 const Main = () => {
@@ -12,8 +12,8 @@ const Main = () => {
   const [imageURI, setImageURI] = useState("")
   const [isUploading, setIsUploading] = useState(false)
   const client = new Web3Storage({ token: process.env.REACT_APP_TOKEN })
- const [currentAccount, setCurrentAccount] = useState('');
- 
+  const setCurrentAccount = useState('');
+
   const handleFileChange = (e) => {
     e.preventDefault()
     if (e.target.files[0]) {
@@ -37,21 +37,21 @@ const Main = () => {
 
   const connectWallet = async () => {
     try {
-        const { ethereum } = window;
+      const { ethereum } = window;
 
-        if (!ethereum) {
-            alert("Get MetaMask -> https://metamask.io/");
-            return;
-        }
-        const account = await ethereum.request({ method: "eth_requestAccounts" });
+      if (!ethereum) {
+        alert("Get MetaMask -> https://metamask.io/");
+        return;
+      }
+      const account = await ethereum.request({ method: "eth_requestAccounts" });
 
 
-        console.log("Connected", account[0]);
-        setCurrentAccount(account[0]);
+      console.log("Connected", account[0]);
+      setCurrentAccount(account[0]);
     } catch (error) {
-        console.log(error)
+      console.log(error)
     }
-}
+  }
 
 
 
@@ -63,11 +63,11 @@ const Main = () => {
           <img src='https://raw.githubusercontent.com/SanjayKumar-M/Kryptage/main/frontend/src/Utils/Kryptage.png' alt='/' />
         </div>
         <div className='right btn' >
+
+
+          <button  onClick={connectWallet}>Connect</button>
          
-         
-            <button  onClick={connectWallet}>Connect</button>
-           
-         
+
         </div>
       </nav>
       <div className='main'>
@@ -103,7 +103,7 @@ const Main = () => {
         {imageURI.length > 0 && (
           <div className="link">
             <a href='/'>{imageURI}</a>
-            
+
 
           </div>
         )}
